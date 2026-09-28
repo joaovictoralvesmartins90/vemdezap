@@ -12,6 +12,7 @@ public class Usuario: BaseClass
     public string Senha { get; set; } = string.Empty;
     public DateTime DataCadastro { get; private set; }
     public bool Ativo { get; private set; }
+    public string Papel { get; private set; } = "Usuário";
 
     public Usuario(string nome, string sobrenome, string email, string senha)
     {

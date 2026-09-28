@@ -1,0 +1,6 @@
+@vemdezap.Api_HostAddress = http://localhost:5267
+
+GET {{vemdezap.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
