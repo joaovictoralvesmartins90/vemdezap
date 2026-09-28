@@ -47,6 +47,7 @@ public class AdicionarUsuarioHandler : Notifiable, IRequestHandler<AdicionarUsua
 
         usuario = _usuarioRepository.Adicionar(usuario);
 
+        //criar notificação
         AdicionarUsuarioNotification adicionarUsuarioNotification = new AdicionarUsuarioNotification(usuario);
         await _mediator.Publish(adicionarUsuarioNotification);
 
