@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\vemdezap.Domain\vemdezap.Domain.csproj" />
+    <ProjectReference Include="..\vemdezap.Infra\vemdezap.Infra.csproj" />
   </ItemGroup>
 
 </Project>

@@ -22,7 +22,9 @@ public class TokenService(IConfiguration configuration)
             //email
             new Claim(JwtRegisteredClaimNames.Email, usuario.Email), 
             //jti => jwt id(id do token, que permite montar uma lista de tokens
-            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+            //aqui é que faz funcionar [Authorize(Roles = "...")]
+            new Claim(ClaimTypes.Role, usuario.Papel)
         };
 
         var token = new JwtSecurityToken

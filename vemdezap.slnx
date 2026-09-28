@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="vemdezap.Api/vemdezap.Api.csproj" />
   <Project Path="vemdezap.Domain/vemdezap.Domain.csproj" />
+  <Project Path="vemdezap.Infra/vemdezap.Infra.csproj" />
 </Solution>

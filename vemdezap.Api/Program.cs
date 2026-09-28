@@ -1,7 +1,9 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using vemdezap.Api.Services;
 using vemdezap.Domain.Interfaces;
+using vemdezap.Infra.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 var jwt = builder.Configuration.GetSection("Jwt");
@@ -36,6 +38,9 @@ builder.Services.AddSwaggerGen(options =>
         Description = "Descrição da api VemDeZap"
     });
 });
+
+builder.Services.AddScoped<TokenService>();
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
 var app = builder.Build();
 
